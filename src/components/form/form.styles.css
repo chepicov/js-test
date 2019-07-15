@@ -1,0 +1,65 @@
+.form-main {
+
+}
+
+.main__section {
+  
+}
+
+.header {
+
+}
+
+.header__title {
+  text-transform: capitalize;
+}
+
+.list {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.list__item {
+  padding: 1em;
+}
+
+.list__item + .list__item {
+  border-top: 1px solid #ccc;
+}
+
+.player {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player__name {
+
+}
+
+.player__price {
+
+}
+
+.form__check {
+  text-align: left;
+}
+
+.form__summary {
+  text-align: left;
+  margin: 1em;
+  font-weight: 700;
+}
+
+.form__select {
+  margin-top: 1em;
+}
+
+.form__label {
+  text-transform: capitalize;
+  margin: 0.5em 1em;
+  text-align: left;
+}
+
+.check__icon {
+  width: 10px;
+}

@@ -1,0 +1,41 @@
+.list-main {
+
+}
+
+.list-main__section {
+  
+}
+
+.header {
+
+}
+
+.header__title {
+  text-transform: capitalize;
+}
+
+.list {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.list__item {
+  padding: 1em;
+}
+
+.list__item + .list__item {
+  border-top: 1px solid #ccc;
+}
+
+.player {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player__name {
+
+}
+
+.player__price {
+
+}

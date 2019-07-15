@@ -1,0 +1,61 @@
+.main-container {
+  width: 100%;
+}
+
+.root {
+  border: 0.065em solid #ccc;
+  border-radius: 0.25em;
+  position: relative;
+  transition-duration: 0.3s;
+  transition-property: box-shadow;
+  outline: none;
+}
+
+.option {
+  font-size: 1rem;
+  min-height: 1rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 0.65em 1em;
+  line-height: 1.3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option__selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+svg {
+  display: none;
+}
+
+.option__label {
+  padding: 0.35em 0.5em 0.3em;
+}
+
+.floating {
+  position: absolute;
+  z-index: 11;
+  padding-bottom: 0.5714285714285714em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.2857142857142857em;
+  box-shadow:
+    0 0.35714285714285715em 0.35714285714285715em 0 rgba(0, 0, 0, 0.2),
+    0 0.21428571428571427em 1em 0 rgba(0, 0, 0, 0.12),
+    0 0.5714285714285714em 0.7142857142857143em 0 rgba(0, 0, 0, 0.14);
+  max-height: 21.428571428571427em;
+  overflow-y: auto;
+}
+
+.floating .option:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.arrow {
+  margin-left: auto;
+}

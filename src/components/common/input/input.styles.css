@@ -1,0 +1,44 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper__errors {
+  font-size: 1rem;
+  color: red;
+  margin: 0.2857142857142857em 0 0;
+}
+
+.input-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  border-radius: 0.2857142857142857em;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.input-container__errors {
+  border: 1px solid red;
+}
+
+.input-container__label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: white;
+  padding: 0.42em 0;
+  width: auto;
+}
+
+.input-container__input {
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.5em;
+}
+
+.input-container__input:disabled {
+  color: #ccc;
+}
