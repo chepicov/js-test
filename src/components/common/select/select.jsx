@@ -72,10 +72,10 @@ class Select extends Component {
     return (
       <ClickOutside
         onClickOutside={this.onBlur}
-        className="mainContainer"
+        className="main__container"
       >
         <div
-          className={cx('root', className)}
+          className={cx('select-root', className)}
           tabIndex={-1}
           role="button"
           onKeyUp={this.onClick}
@@ -86,7 +86,7 @@ class Select extends Component {
             aria-selected
             className="option"
           >
-            {selectedOption ? selectedOption.label : ''}
+            {selectedOption ? selectedOption.label : 'Tap to Select'}
             <div />
           </div>
           {opened && floatingPart}

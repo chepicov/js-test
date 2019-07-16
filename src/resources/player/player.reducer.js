@@ -19,6 +19,7 @@ export default (state = initialState, action) => {
             ...acc,
             ...groupObj[group].map(player => ({
               ...player,
+              name: player.player,
               type: group,
             })),
           ];

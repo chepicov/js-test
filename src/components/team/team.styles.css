@@ -1,0 +1,22 @@
+.team {
+
+}
+
+.team__title {
+
+}
+
+.team__price {
+  font-weight: 700;
+  margin: 1em;
+}
+
+.team-role {
+  display: flex;
+  justify-content: center;
+  margin: 1em;
+}
+
+.team-role__name {
+  text-transform: capitalize;
+}

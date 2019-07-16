@@ -1,13 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import cx from 'classnames';
 import { withRouter } from "react-router";
 import Select from 'components/common/select';
 import Input from 'components/common/input';
 import Button from 'components/common/button';
 import checked from 'assets/icons/checked.svg';
 import error from 'assets/icons/close.svg';
-import { connect } from 'react-redux';
 import { fetchPlayers } from 'resources/player/player.actions';
-import { saveForm } from 'resources/user/user.actions';
+import { saveTeam } from 'resources/user/user.actions';
 import { getPlayers } from 'resources/player/player.selectors';
 import { PLAYER_ROLES } from 'app.constants';
 import './form.styles.css';
@@ -55,8 +56,14 @@ class Form extends React.Component {
   }
 
   onSubmit = (e) => {
+    const { selectedPlayers, name, summary } = this.state;
     e.preventDefault();
-    this.props.saveForm(this.state);
+    this.props.saveTeam({
+      name,
+      players: selectedPlayers,
+      summary,
+    });
+    this.props.history.push('/');
   }
 
   onSelect = key => (player) => {
@@ -120,7 +127,7 @@ class Form extends React.Component {
                 .find(item => item.id === selectedPlayers[role]);
               const selectedOption = selectedPlayer && {
                 value: selectedPlayer.id,
-                label: selectedPlayer.player,
+                label: selectedPlayer.name,
               };
               return (
                 <div className="form__select">
@@ -130,7 +137,7 @@ class Form extends React.Component {
                     onChange={this.onSelect(role)}
                     options={players
                       .filter(({ type }) => type === role)
-                      .map(item => ({ value: item.id, label: item.player, secondLabel: `$${item.price}` }))}
+                      .map(item => ({ value: item.id, label: item.name, secondLabel: `$${item.price}` }))}
                     selectedOption={selectedOption}
                   />
                 </div>
@@ -141,7 +148,10 @@ class Form extends React.Component {
           <ul className="form__check">
             {
               Object.keys(checks).map(key => (
-                <li className="check">
+                <li className={cx('check', {
+                    'check--error': !checks[key].value,
+                  })}
+                >
                   <img className="check__icon" src={checks[key].value ? checked : error} alt="check" />&nbsp;
                   {checks[key].label}
                 </li>
@@ -149,7 +159,7 @@ class Form extends React.Component {
             }
           </ul>
           <Button
-            onClick={() => this.props.history.push('/list')}
+            onClick={() => this.props.history.push('/')}
             grey
           >
             Cancel
@@ -171,5 +181,5 @@ export default withRouter(connect(state => ({
   players: getPlayers(state),
 }), {
   fetchPlayers,
-  saveForm,
+  saveTeam,
 })(Form));

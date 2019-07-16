@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.root {
+.select-root {
   border: 0.065em solid #ccc;
   border-radius: 0.25em;
   position: relative;
@@ -13,7 +13,6 @@
 
 .option {
   font-size: 1rem;
-  min-height: 1rem;
   cursor: pointer;
   text-transform: capitalize;
   padding: 0.65em 1em;

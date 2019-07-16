@@ -1,5 +1,5 @@
+import playerList from 'mock/playerList';
 import * as api from './player.api';
-import playerList from './playerList';
 
 export const FETCH_PLAYERS = 'fetchPlayers';
 

@@ -15,12 +15,13 @@ class Button extends React.PureComponent {
     const {
       children,
       onClick,
+      grey,
     } = this.props;
     const props = _omit(this.props, ['className', 'classNames', 'onClick', 'label', 'value', 'grey']);
     return (
       <button
         className={cx('button', {
-          ['button--grey']: this.props.grey,
+          'button--grey': grey,
         })}
         onClick={onClick}
         {...props}
@@ -32,11 +33,13 @@ class Button extends React.PureComponent {
 }
 
 Button.propTypes = {
+  grey: PropTypes.bool,
   children: PropTypes.string,
   onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
+  grey: false,
   children: '',
   onClick: noop,
 };

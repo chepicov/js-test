@@ -16,6 +16,11 @@ class List extends React.Component {
 
     return (
       <div className="list-main">
+        <Button
+          onClick={() => this.props.history.push('/')}
+        >
+          Back To Team
+        </Button>
         {PLAYER_ROLES.map((role) => {
           return (
             <section className="list-main__section" key={role}>
@@ -29,7 +34,7 @@ class List extends React.Component {
                     .map(player => (
                       <li className="list__item player" key={player.id}>
                         <div className="player__name">
-                          {player.player}
+                          {player.name}
                         </div>
                         <div className="player__price">
                           ${player.price}
@@ -40,11 +45,6 @@ class List extends React.Component {
               </ul>
             </section>
           )})}
-        <Button
-          onClick={() => this.props.history.push('/')}
-        >
-          New Team
-        </Button>
       </div>
     );
   }

@@ -3,7 +3,7 @@ import {
 } from './user.actions';
 
 export const initialState = {
-  team: {},
+  team: null,
   email: '',
   name: '',
 };

@@ -44,6 +44,14 @@
   text-align: left;
 }
 
+.form__check .check {
+  color: green;
+}
+
+.form__check .check--error {
+  color: red;
+}
+
 .form__summary {
   text-align: left;
   margin: 1em;
