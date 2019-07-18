@@ -18,27 +18,27 @@
   border: 1px solid #ccc;
   box-sizing: border-box;
   position: relative;
-}
 
-.input-container__errors {
-  border: 1px solid red;
-}
+  &__errors {
+    border: 1px solid red;
+  }
 
-.input-container__label {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 500;
-  background-color: white;
-  padding: 0.42em 0;
-  width: auto;
-}
+  &__label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-color: white;
+    padding: 0.42em 0;
+    width: auto;
+  }
 
-.input-container__input {
-  font-size: 1rem;
-  width: 100%;
-  padding: 0.5em;
-}
+  &__input {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5em;
 
-.input-container__input:disabled {
-  color: #ccc;
+    &:disabled {
+      color: #ccc;
+    }
+  }
 }

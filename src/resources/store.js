@@ -16,12 +16,12 @@ const configureStore = (initialState, history) => {
     ),
   );
 
-  // if (module.hot) {
-  //   module.hot.accept('./reducer', () => {
-  //     const nextRootReducer = require('./reducer').default; // eslint-disable-line
-  //     store.replaceReducer(nextRootReducer);
-  //   });
-  // }
+  if (module.hot) {
+    module.hot.accept('./reducer', () => {
+      const nextRootReducer = require('./reducer').default; // eslint-disable-line
+      store.replaceReducer(nextRootReducer);
+    });
+  }
 
   return store;
 };

@@ -1,4 +1,4 @@
 
-export const SAVE_TEAM = 'saveTeam';
+export const SET_SESSION_USER = 'setSessionUser';
 
-export const saveTeam = (payload) => ({ type: SAVE_TEAM, payload });
+export const setSessionUser = payload => dispatch => dispatch({ type: SET_SESSION_USER, payload });

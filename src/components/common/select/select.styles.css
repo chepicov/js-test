@@ -20,18 +20,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.option__selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
+  &__selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
 
-svg {
-  display: none;
-}
-
-.option__label {
-  padding: 0.35em 0.5em 0.3em;
+  &__label {
+    padding: 0.35em 0.5em 0.3em;
+  }
 }
 
 .floating {
@@ -49,10 +45,10 @@ svg {
     0 0.5714285714285714em 0.7142857142857143em 0 rgba(0, 0, 0, 0.14);
   max-height: 21.428571428571427em;
   overflow-y: auto;
-}
 
-.floating .option:hover {
-  background-color: rgba(0, 0, 0, 0.03);
+  .option:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
 }
 
 .arrow {

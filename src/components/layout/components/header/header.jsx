@@ -6,9 +6,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className="App-header">
-        <a href="/">
-          <img src={logo} className="App-logo" alt="logo" />
-        </a>
+        <img src={logo} className="App-logo" alt="logo" />
       </header>
     );
   }

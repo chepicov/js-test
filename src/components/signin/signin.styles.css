@@ -1,0 +1,14 @@
+.signin {
+  display: flex;
+  justify-content: center;
+
+  .form {
+    min-width: 500px;
+
+    &__label {
+      text-transform: capitalize;
+      margin: 1em 1em 0;
+      text-align: left;
+    }
+  }
+}

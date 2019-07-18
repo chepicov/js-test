@@ -1,3 +1,3 @@
-export function getTeam({ user }) {
-  return user.team;
+export function getUser({ user }) {
+  return user.sessionUser;
 }

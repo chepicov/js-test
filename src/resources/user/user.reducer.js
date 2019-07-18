@@ -1,19 +1,17 @@
 import {
-  SAVE_TEAM,
+  SET_SESSION_USER,
 } from './user.actions';
 
 export const initialState = {
-  team: null,
-  email: '',
-  name: '',
+  sessionUser: {},
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case SAVE_TEAM: {
+    case SET_SESSION_USER: {
       const newState = { ...state };
 
-      newState.team = action.payload;
+      newState.sessionUser = action.payload;
       return newState;
     }
     default:

@@ -1,5 +1,6 @@
 import {
   FETCH_PLAYERS,
+  FETCH_PLAYER,
 } from './player.actions';
 
 export const initialState = {
@@ -24,6 +25,22 @@ export default (state = initialState, action) => {
             })),
           ];
         }, []);
+      return newState;
+    }
+    case FETCH_PLAYER: {
+      const newState = { ...state };
+      const { id, ...details } = action.payload;
+
+      newState.players = state.players.map((player) => {
+        if (player.id !== id) {
+          return player;
+        }
+
+        return {
+          ...player,
+          details,
+        };
+      });
       return newState;
     }
     default:

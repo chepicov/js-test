@@ -11,9 +11,10 @@ class Select extends Component {
   };
 
   onOptionClick = value => (event) => {
+    const { onChange } = this.props;
     event.stopPropagation();
     this.close();
-    this.props.onChange(value);
+    onChange(value);
   };
 
   onBlur = () => {
@@ -25,13 +26,15 @@ class Select extends Component {
   };
 
   close = () => {
+    const { onToggle } = this.props;
     this.setState({ opened: false });
-    this.props.onToggle(false);
+    onToggle(false);
   };
 
   open = () => {
+    const { onToggle } = this.props;
     this.setState({ opened: true });
-    this.props.onToggle(true);
+    onToggle(true);
   };
 
   renderOption = ({ value, label, secondLabel }) => {
@@ -114,12 +117,8 @@ Select.defaultProps = {
   onChange: noop,
   onToggle: noop,
   options: [],
-  errors: [],
   className: '',
   selectedOption: null,
-  textClassName: null,
-  optionsClassName: null,
-  scrollOnOpening: false,
 };
 
 export default Select;

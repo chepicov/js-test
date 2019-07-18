@@ -8,3 +8,7 @@ const request = (method, url) => axios({
 export const fetchPlayers = () => {
   return request('get', '/playerList.json');
 };
+
+export const fetchSinglePlayer = (id) => {
+  return request('get', `/playerDetail/${id}`);
+};

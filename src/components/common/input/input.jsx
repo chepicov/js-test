@@ -9,15 +9,17 @@ import './input.styles.css';
 
 class Input extends React.PureComponent {
   onChange = (e) => {
-    this.props.onChange(e.target.value);
+    const { onChange } = this.props;
+    onChange(e.target.value);
   };
 
   errors() {
-    if (!this.props.errors.length) {
+    const { errors } = this.props;
+    if (!errors.length) {
       return null;
     }
 
-    return <div className="input-wrapper__errors">{_uniq(this.props.errors).join(', ')}</div>;
+    return <div className="input-wrapper__errors">{_uniq(errors).join(', ')}</div>;
   }
 
   render() {
